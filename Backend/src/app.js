@@ -14,5 +14,6 @@ app.use(cookieParser)
 // all the router herer
 const authRouter = require("./routes/user.routes")
 app.use("/api/auth",authRouter)
-
+const interviewRouter =require("../src/routes/interview.route.js")
+app.use("/api/interview",interviewRouter)
 module.exports  = app;
