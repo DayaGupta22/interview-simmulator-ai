@@ -38,6 +38,7 @@ An intelligent web application that simulates real interview experiences by anal
 
 ---
 
+
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -131,6 +132,7 @@ OPENAI_API_KEY=your_api_key
 
 ---
 
+
 ## 🚀 Future Enhancements
 
 * 🎙️ Voice-based interview (speech recognition)
@@ -138,6 +140,14 @@ OPENAI_API_KEY=your_api_key
 * 📊 Performance analytics dashboard
 * 🧑‍💼 Company-specific interview preparation
 * 🧠 AI feedback scoring system
+
+---
+## 📸 Screenshots
+
+### 🔹 API Response (Interview Report)
+![Interview Report](image.png)
+
+> 📌 Shows successful API response after uploading resume + job description and generating AI-powered interview report.
 
 ---
 

@@ -2,17 +2,19 @@ const{Router} = require('express')
 const authRouter = Router();
 const {registerUser,loginUser,logoutUser,getMe} = require("../controller/user.controller")
 const {authUser} = require("../middleware/auth.middleware")
+const User = require("../models/user.models")
 /**
  * @route POST /api/auth/register
  */
 authRouter.post("/register",registerUser);
-
 /**
  * @route post /api/auth/login
  * @acces public
  * @description user login by email and password
  */
 authRouter.post("/login",loginUser)
+
+
 /**
  * @route get /api/auth/logout
  * @access private

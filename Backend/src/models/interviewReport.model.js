@@ -1,8 +1,5 @@
 
-const mongoose = require("mongoose ");
-
-
-
+const mongoose = require("mongoose");
 
 const technicalQuestionSchema = new mongoose.Schema({
     question: {
@@ -84,7 +81,7 @@ const interviewReportSchema = new mongoose.Schema({
         max: 100,
     },
     technicalQuestion: [technicalQuestionSchema],
-    behavioralQuestions: [behavioralQuestionSchema0],
+    behavioralQuestions: [behavioralQuestionSchema],
     skillGaps: [skillGapSchema],
     preprationPlan: [preprationPlanSchema],
     user: {
