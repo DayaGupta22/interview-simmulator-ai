@@ -1,5 +1,6 @@
 
 const mongoose = require("mongoose");
+const { string } = require("zod");
 
 const technicalQuestionSchema = new mongoose.Schema({
     question: {
@@ -65,12 +66,12 @@ const preprationPlanSchema = new mongoose.Schema({
 })
 
 const interviewReportSchema = new mongoose.Schema({
-    jobDescription: {
-        type: String,
-        require: [true, "job description is required"],
-    },
+    
     resume: {
         type: String,
+    },jobDescription: {
+        type: String,
+        require: [true, "job description is required"],
     },
     selfDescription: {
         type: String,
@@ -80,14 +81,15 @@ const interviewReportSchema = new mongoose.Schema({
         min: 0,
         max: 100,
     },
-    technicalQuestion: [technicalQuestionSchema],
+    technicalQuestions: [technicalQuestionSchema],
     behavioralQuestions: [behavioralQuestionSchema],
     skillGaps: [skillGapSchema],
     preprationPlan: [preprationPlanSchema],
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "users"
-    }
+    },
+   
 },{ timestamps: true})
 const interviewReportModel = mongoose.model("interviewReport", interviewReportSchema);
 module.exports = interviewReportModel;

@@ -2,6 +2,7 @@ import React from "react"
 import { RouterProvider } from "react-router"
 import {router} from "./app.routes"
 import {AuthProvider} from  "./features/auth/auth.context"
+
 function App() {
   
 
@@ -9,7 +10,6 @@ function App() {
    <AuthProvider>
     <RouterProvider router ={router}/>
    </AuthProvider>
-    
          
   
   )

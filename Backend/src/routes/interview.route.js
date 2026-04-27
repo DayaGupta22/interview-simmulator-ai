@@ -15,4 +15,4 @@ interviewRouter.post("/", authMiddleware.authUser,upload.single('resume'),interv
 
 
 
-module.exports= interviewRouter
+module.exports= interviewRouter 

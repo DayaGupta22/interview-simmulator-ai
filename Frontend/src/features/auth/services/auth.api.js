@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api =axios.create ({ // repeatative code 
-    baseURL:"http://localhost:5000",
+    baseURL:"http://localhost:3000",
     withCredentials:true
 })
 export async function register({ username, email, password }) {

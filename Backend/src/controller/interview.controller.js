@@ -13,7 +13,8 @@ async function genrateInteriewReportController(req,res){
     const interviewReportByAi = await genrateInterviewreport({
         resume:resumeContent.text,
         selfDescription,
-        jobDescription})
+        jobDescription
+    })
     
     const interviewReport =await  interviewReportModel.create({
         user:req.user.id,
